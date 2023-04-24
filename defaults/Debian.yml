@@ -1,0 +1,7 @@
+---
+# defaults file for apache
+package: apache2
+package_service: apache2
+path: /var/www/html/
+index: index.php
+software_state: absent

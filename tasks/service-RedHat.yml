@@ -1,0 +1,10 @@
+#- include_vars: "{{ansible_os_family}}.yml"
+- name: populate service facts
+  service_facts:
+- name: stop "{{ package_service }}"
+  service:
+    name: "{{ package_service }}"
+    state: stopped
+  when: "package_service in ansible_facts.services"
+  notify:
+  - start httpd

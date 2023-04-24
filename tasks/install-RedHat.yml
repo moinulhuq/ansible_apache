@@ -1,0 +1,5 @@
+- name: install "{{ package }}"
+  yum:
+    name: "{{ package }}"
+    state: "{{ software_state }}"
+

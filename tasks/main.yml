@@ -1,0 +1,10 @@
+---
+# tasks file for apache
+- name: import vars
+  include_vars: "{{ ansible_os_family  }}.yml"
+- name: install package
+  include_tasks: "install-{{ ansible_os_family  }}.yml"
+- name: configure package
+  include_tasks: "configure-{{ ansible_os_family  }}.yml"
+- name: service package
+  include_tasks: "service-{{ ansible_os_family  }}.yml"

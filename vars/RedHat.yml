@@ -1,0 +1,7 @@
+---
+# vars file for apache
+package: httpd
+package_service: httpd.service
+path: /var/www/html/
+index: index.php
+software_state: present

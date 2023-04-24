@@ -1,0 +1,8 @@
+- name: install "{{ package }}"
+  apt:
+    name: "{{ package }}"
+    state: "{{ software_state }}"
+    autoclean: yes
+    autoremove: yes
+    purge: yes
+

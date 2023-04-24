@@ -1,0 +1,13 @@
+---
+# handlers file for apache
+- name: start apache
+  service:
+    name: apache2
+    state: started
+  #when: "apache2 in services"
+
+- name: start httpd
+  service:
+    name: httpd.service
+    state: started
+  #when: "httpd.service in services"

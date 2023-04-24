@@ -1,0 +1,7 @@
+---
+# handlers file for apache
+- name: start "{{ package_service }}"
+  service:
+    name: "{{ package_service }}"
+    state: started
+  when: "package_service in services"
